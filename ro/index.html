@@ -288,6 +288,17 @@
     flex-shrink: 0;
   }
 
+  .date-section .time-line {
+    margin-top: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 2.8vw, 28px);
+    color: var(--gold-deep);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
   .date-section .venue-block {
     margin-top: 80px;
   }
@@ -1341,6 +1352,8 @@
     <div class="side"><span class="year-inline">2026</span></div>
   </div>
 
+  <div class="time-line">ora 17:00</div>
+
   <div class="venue-block">
     <div class="venue-name">
       Grădina Lahovari<br/>
@@ -1569,7 +1582,7 @@
   // ============================================================
 
   // Countdown
-  const target = new Date("2026-09-26T16:00:00+03:00").getTime();
+  const target = new Date("2026-09-26T17:00:00+03:00").getTime();
   function tick() {
     const now = Date.now();
     let diff = Math.max(0, target - now);
@@ -1633,7 +1646,7 @@
     const lines = [
       "Bună Rodica & Adi! 🌸",
       "",
-      "Confirmare pentru 26 septembrie 2026",
+      "Confirmare pentru 26 septembrie 2026, ora 17:00",
       "",
       `Nume: ${name}`,
       `Participare: ${attend}`
